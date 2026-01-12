@@ -1,4 +1,3 @@
-from turtledemo.clock import current_day
 from data_loader import load_companies, load_questions
 from engine import DiscoveryEngine
 
