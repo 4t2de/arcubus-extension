@@ -4,6 +4,7 @@ from dataclasses import dataclass
 class Company:
     name: str
     description: str
+    domain: str
 
 @dataclass
 class Question:

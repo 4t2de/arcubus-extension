@@ -1,6 +1,32 @@
-name,description
-AlphaBank,A traditional commercial bank focusing on high-interest savings and corporate lending.
-QuickPay,A fintech startup providing mobile-first payment solutions for freelancers and small vendors.
-BlockChainLedger,A B2B financial tech company specializing in distributed ledger technology for international settlements.
-SafeVault,Secure personal banking app for consumer savings and micro-investing.
-TradeFlow,An enterprise platform for global supply chain financing and B2B payments.
+name,description,domain
+AlphaBank,Traditional high-street bank with physical branches for personal and corporate checking.,finance
+MetropolisPrivate,Elite traditional banking for high-net-worth individuals with dedicated advisors.,finance
+GlobalTrust,Standard retail bank focused on long-term savings and physical safe deposit boxes.,finance
+CityCorpBusiness,Commercial bank specializing in large-scale corporate payroll and lending.,finance
+QuickPay,Consumer fintech for peer-to-peer mobile payments and instant digital wallets.,fintech
+BlockChainLedger,Enterprise B2B infrastructure using distributed ledger technology for trade settlements.,fintech
+PayShield,B2B fraud prevention and AML infrastructure for other fintech platforms.,fintech
+ZenFinance,Personal finance manager that tracks spending and suggests budgeting improvements.,fintech
+CryptoBridge,A secure exchange for swapping institutional-grade digital assets and stablecoins.,fintech
+TaxWizard,AI-powered tax filing assistant for freelancers and independent contractors.,fintech
+GlobalRemit,Low-cost international money transfer service focused on expatriate remittances.,fintech
+SpendWise,Corporate card and expense management platform for startups.,fintech
+SafeVault,Retail investment app specializing in micro-investments and high-yield automated savings.,investing
+NeoWealth,AI robo-advisor for algorithmic portfolio management for individuals.,investing
+GreenBond,Sustainable finance firm focusing exclusively on ESG investing and green bonds.,investing
+EstateCrowd,Real estate crowdfunding platform for fractional property investment.,investing
+YieldMaster,DeFi protocol for automated yield farming and liquidity provision.,investing
+TradeNinja,High-frequency trading platform for retail day traders.,investing
+NexusTrade,Dark pool liquidity provider for institutional block trading.,investing
+CarbonCreditEx,Marketplace for buying and selling certified industrial carbon offsets.,investing
+GoldGuard,Platform for buying and storing physical gold and silver in secure vaults.,investing
+VentureTrack,Dashboard for angel investors to monitor startup equity and valuations.,investing
+MicroLend,P2P marketplace connecting small business owners in emerging markets with lenders.,lending
+LendFast,Automated personal loan platform using alternative data for credit scoring.,lending
+MortgageEase,Digital-first mortgage broker simplifying residential home loans for first-time buyers.,lending
+FactorPlus,Invoice factoring service for trucking and logistics companies.,lending
+AgriFinance,Lending and insurance specifically for large-scale agricultural operations.,lending
+EduLoan,Specialized lending for higher education and vocational training.,lending
+LeaseLogic,B2B platform for commercial equipment and vehicle fleet leasing.,lending
+OceanicTrade,Trade finance for maritime shipping and international cargo logistics.,lending
+HealthPay,Fintech for managing healthcare savings accounts and medical bill financing.,lending

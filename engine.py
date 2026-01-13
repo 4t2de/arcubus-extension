@@ -24,7 +24,6 @@ class DiscoveryEngine:
         """
 
         try:
-            # Using GPT OSS 20B for high-speed logical filtering
             chat_completion = self.client.chat.completions.create(
                 messages=[
                     {

@@ -2,9 +2,9 @@ from data_loader import load_companies, load_questions
 from engine import DiscoveryEngine
 
 def run_discovery():
-    domain_choice = input("Enter domain: (ex. Finance, Fintech)").strip().lower()
+    domain_choice = input("Enter domain: (ex. Finance, Fintech): ").strip().lower()
 
-    all_companies = load_companies()
+    all_companies = load_companies(domain_choice)
     questions = load_questions(domain_choice)
 
     if not questions:
