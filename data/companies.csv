@@ -1,32 +1,32 @@
 name,description,domain
-AlphaBank,Traditional high-street bank with physical branches for personal and corporate checking.,finance
-MetropolisPrivate,Elite traditional banking for high-net-worth individuals with dedicated advisors.,finance
-GlobalTrust,Standard retail bank focused on long-term savings and physical safe deposit boxes.,finance
-CityCorpBusiness,Commercial bank specializing in large-scale corporate payroll and lending.,finance
-QuickPay,Consumer fintech for peer-to-peer mobile payments and instant digital wallets.,fintech
-BlockChainLedger,Enterprise B2B infrastructure using distributed ledger technology for trade settlements.,fintech
-PayShield,B2B fraud prevention and AML infrastructure for other fintech platforms.,fintech
-ZenFinance,Personal finance manager that tracks spending and suggests budgeting improvements.,fintech
-CryptoBridge,A secure exchange for swapping institutional-grade digital assets and stablecoins.,fintech
-TaxWizard,AI-powered tax filing assistant for freelancers and independent contractors.,fintech
-GlobalRemit,Low-cost international money transfer service focused on expatriate remittances.,fintech
-SpendWise,Corporate card and expense management platform for startups.,fintech
-SafeVault,Retail investment app specializing in micro-investments and high-yield automated savings.,investing
-NeoWealth,AI robo-advisor for algorithmic portfolio management for individuals.,investing
-GreenBond,Sustainable finance firm focusing exclusively on ESG investing and green bonds.,investing
-EstateCrowd,Real estate crowdfunding platform for fractional property investment.,investing
-YieldMaster,DeFi protocol for automated yield farming and liquidity provision.,investing
-TradeNinja,High-frequency trading platform for retail day traders.,investing
-NexusTrade,Dark pool liquidity provider for institutional block trading.,investing
-CarbonCreditEx,Marketplace for buying and selling certified industrial carbon offsets.,investing
-GoldGuard,Platform for buying and storing physical gold and silver in secure vaults.,investing
-VentureTrack,Dashboard for angel investors to monitor startup equity and valuations.,investing
-MicroLend,P2P marketplace connecting small business owners in emerging markets with lenders.,lending
-LendFast,Automated personal loan platform using alternative data for credit scoring.,lending
-MortgageEase,Digital-first mortgage broker simplifying residential home loans for first-time buyers.,lending
-FactorPlus,Invoice factoring service for trucking and logistics companies.,lending
-AgriFinance,Lending and insurance specifically for large-scale agricultural operations.,lending
-EduLoan,Specialized lending for higher education and vocational training.,lending
-LeaseLogic,B2B platform for commercial equipment and vehicle fleet leasing.,lending
-OceanicTrade,Trade finance for maritime shipping and international cargo logistics.,lending
-HealthPay,Fintech for managing healthcare savings accounts and medical bill financing.,lending
+JPMorgan Chase,A global financial services giant offering traditional retail banking and complex investment banking with a massive physical branch network.,finance
+Goldman Sachs,Focuses on institutional banking and high-net-worth wealth management via its Marcus platform and traditional private wealth division.,finance
+HSBC,A massive international bank specializing in cross-border corporate banking and trade finance for global enterprises.,finance
+Barclays,UK-based universal bank known for strong credit card operations and comprehensive corporate lending services.,finance
+Revolut,A global digital-only neobank providing multi-currency accounts and instant P2P payments for travelers and tech-savvy consumers.,fintech
+Stripe,Provides economic infrastructure for the internet through a B2B payment gateway API used by millions of businesses to accept online payments.,fintech
+Chainalysis,Blockchain data platform that provides compliance and investigation software to government agencies and cryptocurrency businesses.,fintech
+Plann,Personal finance app that aggregates bank accounts to provide AI-driven budgeting and automated spending categorization.,fintech
+Coinbase,A secure US-based exchange platform for buying and selling institutional-grade digital assets and institutional custody solutions.,fintech
+Deel,HR and fintech platform that automates international payroll and tax compliance for companies hiring freelancers and remote workers.,fintech
+Wise,Specializes in low-cost international money transfers using a mid-market exchange rate to reduce hidden fees for expatriates.,fintech
+Brex,Provides corporate credit cards and expense management software specifically tailored for high-growth startups and venture-backed firms.,fintech
+Betterment,The pioneer of automated robo-advising offering retail investors low-cost algorithmic portfolio management and retirement planning.,investing
+Wealthfront,A leading robo-advisor focusing on tax-advantaged automated investing and high-yield cash accounts for millennial professionals.,investing
+Aspiration,A sustainable financial firm that offers 'Spend & Save' accounts where deposits are not used to fund fossil fuel projects or firearm manufacturing.,investing
+Fundrise,Real estate crowdfunding platform that allows retail investors to buy fractional shares of high-quality commercial real estate portfolios.,investing
+Uniswap,A decentralized finance (DeFi) protocol on Ethereum that uses automated market makers (AMMs) to provide permissionless liquidity.,investing
+Robinhood,A retail brokerage known for zero-commission stock trading and a mobile-first interface designed to democratize access to financial markets.,investing
+Citadel Securities,A major market maker and liquidity provider that handles high-frequency institutional block trading and execution services.,investing
+Xpansiv,The leading market infrastructure for scaling the energy transition via the buying and selling of certified carbon offsets and RECs.,investing
+OneGold,A digital platform for buying and storing physical precious metals in secure vaults like the Royal Canadian Mint.,investing
+PitchBook,Comprehensive data platform for private equity and venture capital professionals to monitor deal flow and startup valuations.,investing
+Kiva,A peer-to-peer (P2P) lending marketplace that allows individuals to lend small amounts to entrepreneurs in emerging markets.,lending
+Upstart,An AI-driven lending platform that uses alternative data points like education and employment history to determine creditworthiness.,lending
+Rocket Mortgage,A digital-first mortgage lender that has automated the residential home loan process to provide instant pre-approvals.,lending
+Bluevine,Provides small business financing through invoice factoring and flexible lines of credit for B2B companies.,lending
+John Deere Financial,Specialized agricultural lending providing equipment financing and crop insurance for large-scale farming operations.,lending
+Sallie Mae,The primary private student loan provider in the US focusing on higher education and vocational training financing.,lending
+Flexport,Combines freight forwarding with trade finance to provide logistics companies with capital based on their global shipping data.,lending
+Traxpay,Supply chain finance platform that allows maritime and cargo logistics companies to optimize their working capital and payment terms.,lending
+CareCredit,Specialized healthcare credit card for medical procedures and elective surgeries not covered by traditional insurance.,lending

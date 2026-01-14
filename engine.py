@@ -4,61 +4,55 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-class DiscoveryEngine:
-    def __init__(self, companies):
-        self.pool = companies
+class AnalysisEngine:
+    def __init__(self):
+        self.model = "openai/gpt-oss-20b"
         self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-    def _ai_match_logic(self, company, question_text, user_answer):
-        # We define a very strict prompt for the reasoning model
-        prompt = f"""
-        Evaluate if the company matches the user's requirement.
-
-        Company: {company.name}
-        Description: {company.description}
-        Question Asked: {question_text}
-        User Answer: {user_answer}
-
-        Decision Criteria: Does the company description align with the user's answer?
-        Output: 'YES' or 'NO' only.
+    def get_next_question(self, company, user_input=None):
         """
+        Maintains state for each question. Sends the context every call.
+        """
+        if user_input:
+            company.context.append({"role": "user", "content": user_input})
 
-        try:
-            chat_completion = self.client.chat.completions.create(
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "You are a binary classifier. You only output YES or NO."
-                    },
-                    {
-                        "role": "user",
-                        "content": prompt,
-                    }
-                ],
-                model="openai/gpt-oss-20b",
-                temperature=0,
-            )
+        system_message = {
+            "role": "system",
+            "content": f"""You are a business analyst. You are interviewing a user about the company: {company.name}.
+            Company context: {company.description}
+            Goal: Ask one open-ended, vague question at a time to understand what the user wants to know.
+            Maintain context of the conversation. Do not repeat yourself."""
+        }
 
-            # Extract and clean the response
-            raw_answer = chat_completion.choices[0].message.content.strip().upper()
+        messages = [system_message] + company.context
 
-            # Robust check for "YES"
-            return "YES" in raw_answer
+        response = self.client.chat.completions.create(
+            messages = messages,
+            model = self.model,
+            temperature = 0.7
+        )
 
-        except Exception as e:
-            # If the specific model fails, we print the error for debugging
-            print(f"Error calling AI for {company.name}: {e}")
-            return False
+        ai_question = response.choices[0].message.content
 
-    def filter_pool(self, question_text, user_answer):
-        survivors = []
-        print(f"\n--- AI is sieving {len(self.pool)} companies ---")
+        company.context.append({"role": "assistant", "content": ai_question})
+        return ai_question
 
-        for company in self.pool:
-            if self._ai_match_logic(company, question_text, user_answer):
-                survivors.append(company)
+    def get_final_summary(self, company):
+        """
+        Collates the entire transcript into one single answer.
+        """
+        summary_instruction = {
+            "role": "system",
+            "content": """Collate the entire preceding conversation into a single, high-level executive summary about the company, not the user.
+            Focus on the user's interests. Do not use tables. Provide the output in small, concise bullet points.
+            Your main goal is to provide details about the company based on the user's answers."""
+        }
 
-        self.pool = survivors
+        messages = [summary_instruction] + company.context
 
-    def get_results(self):
-        return self.pool
+        response = self.client.chat.completions.create(
+            messages = messages,
+            model = self.model,
+            temperature = 0.2
+        )
+        return response.choices[0].message.content

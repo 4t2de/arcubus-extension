@@ -1,40 +1,38 @@
-from data_loader import load_companies, load_questions
-from engine import DiscoveryEngine
+from data_loader import load_companies
+from engine import AnalysisEngine
+
 
 def run_discovery():
     domain_choice = input("Enter domain: (ex. Finance, Fintech): ").strip().lower()
+    companies = load_companies(domain_choice)
+    if not companies:
+        print(f"No companies found in the domain: {domain_choice}")
+        return
+    print(f"\nCompanies available in {domain_choice}:")
+    for c in companies:
+        print(f"- {c.name}")
 
-    all_companies = load_companies(domain_choice)
-    questions = load_questions(domain_choice)
-
-    if not questions:
-        print(f"No questions found in the domain: {domain_choice}")
+    target_name = input("\nPlease enter the company you want to analyze (case sensitive): ").strip()
+    target_company = next((c for c in companies if c.name == target_name), None)
+    if not target_company:
+        print(f"Error: Company '{target_name}' not found in the {domain_choice} list.")
         return
 
-    engine = DiscoveryEngine(all_companies)
+    print(f"\nStarting analysis for: {target_company.name}")
 
-    for q in questions:
-        print(f"\n[Question]: {q.text}")
-        user_answer = input("Your answer: ")
+    engine = AnalysisEngine()
 
-        engine.filter_pool(q.text, user_answer)
+    user_input = None
 
-        current_count = len(engine.get_results())
-        print(f"Number of matches remaining: {current_count}")
+    for i in range(4):
+        question = engine.get_next_question(target_company, user_input)
+        print(f"\n[AI]: {question}")
+        user_input = input("Your answer: ")
 
-        if current_count == 0:
-            print("No companies match your requirements.")
-            break
-        if current_count == 1:
-            break
+    print("Generating final summary: ")
 
-    final_results = engine.get_results()
-    print("Final Recommendations: ")
-    if final_results:
-        for company in final_results:
-            print(f"{company.name}")
-    else:
-        print("No matching companies for your input.")
+    report = engine.get_final_summary(target_company)
+    print(report)
 
 if __name__ == "__main__":
     run_discovery()
