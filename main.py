@@ -1,7 +1,6 @@
 from data_loader import load_companies
 from engine import AnalysisEngine
 
-
 def run_discovery():
     domain_choice = input("Enter domain: (ex. Finance, Fintech): ").strip().lower()
     companies = load_companies(domain_choice)
